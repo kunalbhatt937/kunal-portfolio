@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kunal bhatt|portfolio</title>
+  <meta name="description" content="Portfolio of Kunal Bhatt — frontend developer specializing in modern web applications, Python programming, and clean, responsive design.">
+  <meta name="keywords" content="portfolio, , web developer, python developer, frontend developer, clean code, software engineer">
+  <meta name="author" content="Kunal Bhatt">
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Kunal Bhatt | Frontend developer">
+  <meta property="og:description" content="Portfolio showcasing projects, skills, and experience in modern web development.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+
+  <!-- Google Fonts: Poppins + JetBrains Mono (accent/utility face) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__bracket">&lt;</span>
+      <span class="loader__name">KB</span>
+      <span class="loader__bracket">/&gt;</span>
+      <div class="loader__bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ===================== CUSTOM CURSOR ===================== -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ===================== SCROLL PROGRESS BAR ===================== -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===================== PARTICLE BACKGROUND (global, subtle) ===================== -->
+  <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-bracket">&lt;</span>KB<span class="nav__logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#home" class="nav__link active-link">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#certificates" class="nav__link">Certificates</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+          <i class="fa-solid fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
+          <i class="fa-solid fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="hero__blobs" aria-hidden="true">
+        <span class="blob blob--1"></span>
+        <span class="blob blob--2"></span>
+        <span class="blob blob--3"></span>
+      </div>
+      <div class="hero__floating-icons" aria-hidden="true">
+        <i class="fa-brands fa-html5 float-icon float-icon--1"></i>
+        <i class="fa-brands fa-css3-alt float-icon float-icon--2"></i>
+        <i class="fa-brands fa-js float-icon float-icon--3"></i>
+        <i class="fa-brands fa-python float-icon float-icon--4"></i>
+        <i class="fa-brands fa-git-alt float-icon float-icon--5"></i>
+        <i class="fa-brands fa-react float-icon float-icon--6"></i>
+      </div>
+
+      <div class="container hero__container">
+        <div class="hero__content reveal" data-reveal="slide-up">
+          <p class="hero__eyebrow"><span class="eyebrow-dot"></span>Building thoughtful digital experiences</p>
+          <h1 class="hero__title">
+            Hi, I'm <span class="text-gradient">Kunal Bhatt</span>
+          </h1>
+          <h2 class="hero__subtitle">
+            <span id="typedText"></span><span class="typed-cursor">|</span>
+          </h2>
+          <p class="hero__desc">
+            I'm Kunal Bhatt, a BCA student at MIET Kumaon with a passion for web development and programming.
+            I build responsive, user-friendly websites and enjoy turning ideas into real-world projects.
+          </p>
+
+          <div class="hero__buttons">
+            <a href="#" class="btn btn--gradient ripple" download>
+              <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn btn--outline ripple">
+              <i class="fa-regular fa-paper-plane"></i> Hire Me
+            </a>
+          </div>
+
+          <div class="hero__meta">
+            <span><i class="fa-solid fa-location-dot"></i> Haldwani, Uttarakhand</span>
+            <span><i class="fa-solid fa-code"></i> Web & Python Projects</span>
+          </div>
+
+          <div class="hero__socials">
+            <a href="https://github.com/kunalbhatt937" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" data-reveal="zoom">
+          <div class="hero__ring hero__ring--1"></div>
+          <div class="hero__ring hero__ring--2"></div>
+          <div class="hero__photo-frame tilt">
+            <img src="assests/KUNAL.jpeg" alt="Kunal Bhatt" class="hero__photo-image">
+          </div>
+          <span class="hero__badge hero__badge--1"><i class="fa-solid fa-code"></i> Clean Code</span>
+          <span class="hero__badge hero__badge--2"><i class="fa-solid fa-mobile-screen"></i> Responsive</span>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <span class="scroll-down__mouse"><span class="scroll-down__wheel"></span></span>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="fade">
+          <span class="section__eyebrow">About Me</span>
+          <h2 class="section__title">A technology learner with a sharp eye for clean interfaces</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__content reveal" data-reveal="slide-up">
+            <h3 class="about__heading">I'm Kunal Bhatt — a curious developer building practical, polished solutions</h3>
+            <p class="about__text">
+              I specialize in building performant, accessible web applications with a strong interest in Python programming and database management.
+              I focus on creating user-friendly interfaces and delivering thoughtful solutions that meet real needs.
+            </p>
+
+            <ul class="about__info-list">
+              <li><span class="about__info-label"><i class="fa-solid fa-user"></i> Name:</span> Kunal Bhatt</li>
+              <li><span class="about__info-label"><i class="fa-solid fa-envelope"></i> Email:</span> kunalbhatt937@gmail.com</li>
+              <li><span class="about__info-label"><i class="fa-solid fa-phone"></i> Phone:</span> xxx- xxx-8757</li>
+              <li><span class="about__info-label"><i class="fa-solid fa-location-dot"></i> Location:</span> Haldwani, Uttarakhand</li>
+              <li><span class="about__info-label"><i class="fa-solid fa-graduation-cap"></i> Degree:</span> BCA </li>
+
+            </ul>
+
+            <div class="about__sub-grid">
+              <div class="about__sub-card">
+                <h4><i class="fa-solid fa-language"></i> Languages</h4>
+                <p>Python,Sql,C,C++</p>
+              </div>
+              <div class="about__sub-card">
+                <h4><i class="fa-solid fa-heart"></i> Interests</h4>
+                <p> Photography, Chess</p>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn--gradient ripple">
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="fade">
+          <span class="section__eyebrow">02 · Skills</span>
+          <h2 class="section__title">Technologies &amp; abilities I bring to the table</h2>
+        </div>
+
+        <div class="skills__grid">
+          <div class="skills__col reveal" data-reveal="slide-up">
+            <h3 class="skills__col-title"><i class="fa-solid fa-code"></i> Programming</h3>
+
+            <div class="skill-bar" data-percent="95">
+              <div class="skill-bar__top"><span>HTML5</span><span class="skill-bar__percent">0%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-percent="90">
+              <div class="skill-bar__top"><span>CSS3</span><span class="skill-bar__percent">0%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-percent="88">
+              <div class="skill-bar__top"><span>JavaScript</span><span class="skill-bar__percent">0%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-percent="85">
+              <div class="skill-bar__top"><span>Python</span><span class="skill-bar__percent">0%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-percent="80">
+              <div class="skill-bar__top"><span>SQL</span><span class="skill-bar__percent">0%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-percent="87">
+              <div class="skill-bar__top"><span>Git</span><span class="skill-bar__percent">0%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-percent="90">
+              <div class="skill-bar__top"><span>GitHub</span><span class="skill-bar__percent">0%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+          </div>
+
+          <div class="skills__col reveal" data-reveal="slide-up">
+            <h3 class="skills__col-title"><i class="fa-solid fa-people-group"></i> Professional Skills</h3>
+
+            <div class="skill-bar" data-percent="92">
+              <div class="skill-bar__top"><span>Communication</span><span class="skill-bar__percent">0%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-percent="85">
+              <div class="skill-bar__top"><span>Leadership</span><span class="skill-bar__percent">0%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-percent="94">
+              <div class="skill-bar__top"><span>Problem Solving</span><span class="skill-bar__percent">0%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+            <div class="skill-bar" data-percent="90">
+              <div class="skill-bar__top"><span>Team Work</span><span class="skill-bar__percent">0%</span></div>
+              <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+            </div>
+
+            <h3 class="skills__col-title skills__col-title--spaced"><i class="fa-solid fa-layer-group"></i> </h3>
+            <div class="skills__chip-group">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="fade">
+          <span class="section__eyebrow"> Services</span>
+          <h2 class="section__title">What I can do for you</h2>
+        </div>
+
+          <div class="service-card reveal" data-reveal="slide-up">
+            <div class="service-card__icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Frontend Development</h3>
+            <p>Crafting pixel-perfect, interactive user interfaces with modern frontend practices.</p>
+          </div>
+          <div class="service-card reveal" data-reveal="slide-up">
+            <div class="service-card__icon"><i class="fa-brands fa-python"></i></div>
+            <h3>Python Programming</h3>
+            <p>Automation scripts, data processing, and backend services powered by Python.</p>
+          </div>
+         
+          <div class="service-card reveal" data-reveal="slide-up">
+            <div class="service-card__icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3>Responsive Design</h3>
+            <p>Ensuring your product looks and works flawlessly on every screen size and device.</p>
+          </div>
+          <div class="service-card reveal" data-reveal="slide-up">
+            <div class="service-card__icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3>Performance Optimization</h3>
+            <p>Speeding up load times and improving Core Web Vitals for a smoother user experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="fade">
+          <span class="section__eyebrow">Projects</span>
+          <h2 class="section__title">Selected work I'm proud of</h2>
+        </div>
+
+        <div class="projects__grid" id="projectsGrid">
+          <article class="project-card reveal" data-reveal="slide-up" data-category="web">
+            <div class="project-card__image">
+              <img src="assests/Screenshot 2026-07-31 110534.png" alt="Project preview 1" />
+              <div class="project-card__overlay">
+                <a href="assests/Screenshot 2026-07-31 110534.png" class="project-card__link" aria-label="View project preview" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3>Project Preview 1</h3>
+              <div class="project-card__tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal="slide-up" data-category="web">
+            <div class="project-card__image">
+              <img src="assests/Screenshot 2026-07-31 110701.png" alt="Project preview 2" />
+              <div class="project-card__overlay">
+                <a href="assests/Screenshot 2026-07-31 110701.png" class="project-card__link" aria-label="View project preview" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3>Project Preview 2</h3>
+              <div class="project-card__tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal="slide-up" data-category="web">
+            <div class="project-card__image">
+              <img src="assests/Screenshot 2026-07-31 110744.png" alt="Project preview 3" />
+              <div class="project-card__overlay">
+                <a href="assests/Screenshot 2026-07-31 110744.png" class="project-card__link" aria-label="View project preview" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3>Project Preview 3</h3>
+              <div class="project-card__tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATES ===================== -->
+    <section class="section certificates" id="certificates">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="fade">
+          <span class="section__eyebrow">Certificates</span>
+          <h2 class="section__title">Courses &amp; certifications</h2>
+        </div>
+
+        <div class="certificates__grid">
+          <div class="certificate-card reveal" data-reveal="slide-up">
+            <div class="certificate-card__image">
+              <img src="assests/certificate.png" alt="Frontend Development certificate" />
+            </div>
+            <h3>Frontend Development</h3>
+            <p>ZeTheta</p>
+            <a href="assests/certificate.png" class="btn btn--sm btn--outline ripple" target="_blank" rel="noopener noreferrer">View Certificate</a>
+          </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACHIEVEMENTS / COUNTERS ===================== -->
+    <section class="section achievements" id="achievements">
+      <div class="container achievements__grid">
+        <div class="achievement reveal" data-reveal="zoom">
+          <i class="fa-solid fa-diagram-project"></i>
+          <span class="counter" data-count="2">0</span>+
+          <p>Projects Completed</p>
+        </div>
+        <div class="achievement reveal" data-reveal="zoom">
+          <i class="fa-solid fa-award"></i>
+          <span class="counter" data-count="2">0</span>+
+          <p>Certificates Earned</p>
+        </div>
+    
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section__head reveal" data-reveal="fade">
+          <span class="section__eyebrow">Contact</span>
+          <h2 class="section__title">Let's build something meaningful together</h2>
+          <p class="contact__lead">Open to web projects, collaborations, and thoughtful digital ideas. Feel free to reach out.</p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info reveal" data-reveal="slide-up">
+            <div class="contact__intro-card">
+              <div class="contact__pill"><i class="fa-solid fa-paper-plane"></i> Available for new opportunities</div>
+              <p>I’m excited to connect for Frontend development, Python work, and creative project ideas.</p>
+            </div>
+
+            <div class="contact__info-card">
+              <i class="fa-solid fa-envelope"></i>
+              <div><h4>Email</h4><p>kunalbhatt937@gmail.com</p></div>
+            </div>
+            <div class="contact__info-card">
+              <i class="fa-solid fa-phone"></i>
+              <div><h4>Phone</h4><p>xxx-xxx-8757</p></div>
+            </div>
+            <div class="contact__info-card">
+              <i class="fa-solid fa-location-dot"></i>
+              <div><h4>Location</h4><p>Haldwani, Uttarakhand</p></div>
+            </div>
+          </div>
+
+          <form class="contact__form reveal" data-reveal="slide-up" id="contactForm" novalidate>
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder=" " required>
+              <label for="name">Name</label>
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder=" " required>
+              <label for="email">Email</label>
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder=" " required>
+              <label for="subject">Subject</label>
+              <span class="form-error" id="subjectError"></span>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+              <label for="message">Your Message</label>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn--gradient ripple">
+              <i class="fa-regular fa-paper-plane"></i> Send Message
+            </button>
+            <p class="form-success" id="formSuccess" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="nav__logo">
+          <span class="nav__logo-bracket">&lt;</span>KB<span class="nav__logo-bracket">/&gt;</span>
+        </a>
+        <p>Building thoughtful digital experiences, one project at a time.</p>
+      </div>
+
+      <div class="footer__links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__socials">
+        <h4>Follow Me</h4>
+        <div class="footer__social-icons">
+          <a href="https://github.com/kunalbhatt937" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/kunalbhatt937/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/kunalbhatt.100/" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; <span id="year"></span> kunal bhatt. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== BACK TO TOP ===================== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
